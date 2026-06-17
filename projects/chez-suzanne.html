@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- MODIFIE : titre du projet -->
+  <title>Chez Suzanne — Léa Hattab</title>
+  <meta name="description" content="Chez Suzanne — Refonte d'identité visuelle pour une boulangerie-café. Branding, 2026.">
+
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/project.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" role="banner">
+    <a href="../index.html" class="header__logo">Léa <span>&amp;</span> Hattab</a>
+    <nav aria-label="Navigation principale">
+      <ul class="header__nav">
+        <li><a href="../work.html">Work</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="header__burger" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <ul class="mobile-nav">
+    <li><a href="../work.html">Work</a></li>
+    <li><a href="../index.html#about">About</a></li>
+    <li><a href="../index.html#contact">Contact</a></li>
+  </ul>
+
+  <main>
+
+    <!-- ── BREADCRUMB ──────────────────────────────────────── -->
+    <!-- MODIFIE : catégorie, type, année -->
+    <div class="project-breadcrumb">
+      <span class="project-breadcrumb__item">Branding</span>
+      <span class="project-breadcrumb__item">Identity Redesign</span>
+      <span class="project-breadcrumb__item">2026</span>
+      <span class="project-breadcrumb__item project-breadcrumb__item--cursive">case study</span>
+    </div>
+
+    <!-- ── HERO PROJET ─────────────────────────────────────── -->
+    <div class="project-hero">
+      <div class="section-label project-hero__label">
+        <!-- MODIFIE : label de section -->
+        Branding
+      </div>
+
+      <!-- MODIFIE : titre du projet -->
+      <h1 class="project-hero__title">Chez Suzanne</h1>
+
+      <!-- MODIFIE : description courte du projet -->
+      <p class="project-hero__subtitle">
+        A full brand identity redesign for a café &amp; bakery built around
+        nostalgia, a grandmother's memory, and the blue of La Baule's beach cabins.
+      </p>
+
+      <div class="project-hero__buttons">
+        <!-- Lien vers le site live (laisse vide si pas de lien) -->
+        <!-- <a href="https://..." target="_blank" rel="noopener" class="btn btn--dark">Voir le site →</a> -->
+        <a href="../work.html" class="btn btn--outline">← Retour au portfolio</a>
+      </div>
+    </div>
+
+    <!-- Image cover principale
+         MODIFIE : remplace le placeholder par ton image
+         <img src="../images/projects/chez-suzanne/cover.jpg" alt="Chez Suzanne — Vue principale"> -->
+    <div style="background: var(--grey-mid); height: 60vh; width: 100%;"></div>
+
+    <!-- ── BARRE D'INFOS ───────────────────────────────────── -->
+    <div class="project-info-bar">
+      <div class="project-info-bar__item">
+        <!-- MODIFIE : le service -->
+        <span class="project-info-bar__label">Service</span>
+        <span class="project-info-bar__value">Brand Identity</span>
+      </div>
+      <div class="project-info-bar__item">
+        <!-- MODIFIE : le secteur -->
+        <span class="project-info-bar__label">Industry</span>
+        <span class="project-info-bar__value">Food &amp; Beverage</span>
+      </div>
+      <div class="project-info-bar__item">
+        <!-- MODIFIE : l'année -->
+        <span class="project-info-bar__label">Year</span>
+        <span class="project-info-bar__value">2026</span>
+      </div>
+      <div class="project-info-bar__item">
+        <!-- MODIFIE : lien vers le site ou "—" si pas de lien -->
+        <span class="project-info-bar__label">View live</span>
+        <span class="project-info-bar__value">—</span>
+      </div>
+    </div>
+
+
+    <!-- ── HISTOIRE DU PROJET (fond sombre) ──────────────────── -->
+    <section class="project-section">
+
+      <div class="section-label section-label--light project-section__label animate-on-scroll">
+        <!-- MODIFIE : titre de la section -->
+        The Story Behind the Brand
+      </div>
+
+      <!-- MODIFIE : titre accentué (em = couleur or) -->
+      <h2 class="project-section__accent-title animate-on-scroll">
+        More than a bakery, <em>A family memory.</em>
+      </h2>
+
+      <!-- MODIFIE : texte long de présentation du projet -->
+      <div class="project-section__text animate-on-scroll">
+        <p>
+          Chez Suzanne is named after their grandmother — a woman who cooked with love
+          and brought her grandchildren to "La Baule" every summer.
+        </p>
+        <p>
+          The brand carries her name as a tribute, a thank you, a memory kept alive.
+        </p>
+        <p>
+          The existing identity was a single outdated logo that no longer reflected
+          the warmth and quality of the bakery. The goal: modernize completely while
+          keeping the soul, the nostalgia, the family story.
+        </p>
+      </div>
+
+    </section>
+
+
+    <!-- ── THE CHALLENGE (fond sombre) ───────────────────────── -->
+    <section class="project-section">
+
+      <div class="section-label section-label--light project-section__label animate-on-scroll">
+        The Challenge
+      </div>
+
+      <!-- MODIFIE : les défis du projet (liste numérotée) -->
+      <div class="challenges-list">
+
+        <div class="challenge-item animate-on-scroll">
+          <div class="challenge-item__num" aria-hidden="true">01</div>
+          <div class="challenge-item__content">
+            <!-- MODIFIE : titre et texte du défi -->
+            <h3 class="challenge-item__title">No Existing Digital Presence</h3>
+            <p class="challenge-item__text">
+              The client had only a logo, no website, no digital assets, no design system.
+              Everything had to be built from scratch while respecting the existing visual identity.
+            </p>
+          </div>
+        </div>
+
+        <div class="challenge-item animate-on-scroll delay-1">
+          <div class="challenge-item__num" aria-hidden="true">02</div>
+          <div class="challenge-item__content">
+            <h3 class="challenge-item__title">Modernize Without Losing the Soul</h3>
+            <p class="challenge-item__text">
+              The brand needed to feel contemporary and premium while preserving the warmth,
+              the nostalgia and the family story that makes Chez Suzanne unique.
+            </p>
+          </div>
+        </div>
+
+        <div class="challenge-item animate-on-scroll delay-2">
+          <div class="challenge-item__num" aria-hidden="true">03</div>
+          <div class="challenge-item__content">
+            <h3 class="challenge-item__title">Consistency Across All Touchpoints</h3>
+            <p class="challenge-item__text">
+              From packaging to social media to in-store signage — every element needed
+              to feel like part of the same coherent world.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ── MON APPROCHE / PROCESSUS ──────────────────────────── -->
+    <section class="project-section">
+
+      <div class="section-label section-label--light project-section__label animate-on-scroll">
+        My Process
+      </div>
+
+      <h2 class="project-section__accent-title animate-on-scroll">
+        How I Approached <em>IT</em>
+      </h2>
+
+      <!-- MODIFIE : les étapes de ton processus -->
+      <div class="process-grid animate-on-scroll">
+
+        <div class="process-card">
+          <div class="process-card__num" aria-hidden="true">01</div>
+          <h3 class="process-card__title">Benchmark</h3>
+          <p class="process-card__text">
+            Analyse du marché, benchmark concurrentiel, identification des codes
+            visuels du secteur boulangerie-café haut de gamme.
+          </p>
+          <span class="process-card__tag">Recherche</span>
+        </div>
+
+        <div class="process-card process-card--dark">
+          <div class="process-card__num" aria-hidden="true">02</div>
+          <h3 class="process-card__title">Brief &amp; Strategy</h3>
+          <p class="process-card__text">
+            Séances de travail avec le client pour définir les valeurs de la marque,
+            le territoire visuel et les messages clés.
+          </p>
+          <span class="process-card__tag">Stratégie</span>
+        </div>
+
+        <div class="process-card process-card--dark">
+          <div class="process-card__num" aria-hidden="true">03</div>
+          <h3 class="process-card__title">Direction artistique</h3>
+          <p class="process-card__text">
+            Création du moodboard, sélection de la palette de couleurs inspirée
+            des cabines bleues de La Baule.
+          </p>
+          <span class="process-card__tag">Création</span>
+        </div>
+
+        <div class="process-card">
+          <div class="process-card__num" aria-hidden="true">04</div>
+          <h3 class="process-card__title">Identité finale</h3>
+          <p class="process-card__text">
+            Déclinaison de l'identité : logo, typographie, palette, charte graphique,
+            packaging, signalétique, réseaux sociaux.
+          </p>
+          <span class="process-card__tag">Livraison</span>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ── SKETCHES / MOODBOARD ───────────────────────────────── -->
+    <section class="project-section project-section--warm">
+
+      <div class="section-label project-section__label animate-on-scroll">
+        Sketches
+      </div>
+
+      <!-- MODIFIE : tes images de moodboard / sketches
+           Remplace les divs vides par des <img>
+           <img src="../images/projects/chez-suzanne/sketch-1.jpg" alt="Sketch 1"> -->
+      <div class="sketches-grid animate-on-scroll">
+        <div class="sketch-card" style="background: var(--grey-light);"></div>
+        <div class="sketch-card" style="background: #d9d9d9;"></div>
+        <div class="sketch-card" style="background: var(--grey-mid);"></div>
+        <div class="sketch-card" style="background: var(--grey-light);"></div>
+      </div>
+
+    </section>
+
+
+    <!-- ── MOCKUPS ────────────────────────────────────────────── -->
+    <section class="mockups-section">
+
+      <div class="section-label section-label--light animate-on-scroll">
+        Mock-ups
+      </div>
+
+      <!-- MODIFIE : tes images de mockups
+           <img src="../images/projects/chez-suzanne/mockup-1.jpg" alt="Mockup principal"> -->
+      <div class="mockup-large animate-on-scroll" style="height: 500px; background: var(--grey-light);"></div>
+
+      <div class="mockup-row animate-on-scroll">
+        <div class="mockup-small" style="background: var(--grey-mid);"></div>
+        <div class="mockup-small" style="background: #d9d9d9;"></div>
+      </div>
+
+    </section>
+
+
+    <!-- ── TÉMOIGNAGE CLIENT (optionnel) ─────────────────────── -->
+    <section class="testimonial">
+
+      <!-- MODIFIE : la citation du client
+           Supprime toute cette section si tu n'as pas de témoignage -->
+      <blockquote class="testimonial__quote animate-on-scroll">
+        "Léa a su capturer exactement ce que nous voulions transmettre — l'âme de Suzanne,
+        la chaleur de la boulangerie, et une identité moderne qui nous ressemble vraiment."
+      </blockquote>
+
+      <div class="testimonial__person animate-on-scroll">
+        <div class="testimonial__avatar">
+          <!-- <img src="../images/projects/chez-suzanne/client-avatar.jpg" alt=""> -->
+        </div>
+        <div>
+          <!-- MODIFIE : nom et rôle du client -->
+          <p class="testimonial__name">Prénom Nom</p>
+          <p class="testimonial__role">Fondateur, Chez Suzanne</p>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- ── NEXT PROJECT ───────────────────────────────────────── -->
+    <section class="next-project">
+      <span class="next-project__word" aria-hidden="true">project</span>
+      <span class="next-project__label">Projet suivant</span>
+      <!-- MODIFIE : nom et lien du prochain projet -->
+      <a href="transformit.html" class="next-project__link">
+        <span class="next-project__name">TransformIT →</span>
+      </a>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <div class="footer-cta">
+      <div class="section-label section-label--light animate-on-scroll">
+        Let's work together?
+      </div>
+      <span class="footer-cta__title animate-on-scroll" aria-hidden="true">
+        let's do this !
+      </span>
+      <div class="footer-cta__email-wrap animate-on-scroll">
+        <!-- MODIFIE : ton email -->
+        <a href="mailto:Lczayache@gmail.com" class="footer-cta__email">
+          Lczayache@gmail.com
+        </a>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <p class="footer-bar__copy">© 2026 Léa Hattab — All rights reserved</p>
+      <nav aria-label="Navigation footer">
+        <ul class="footer-bar__nav">
+          <li><a href="../work.html">Work</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Retourner en haut de la page">↑</button>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/animations.js"></script>
+</body>
+</html>

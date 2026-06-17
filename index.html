@@ -1,94 +1,241 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Léa Hattab — Coming Soon</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Caveat:wght@400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: #eeebe4;
-      color: #111;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 40px 24px;
-    }
-    .logo {
-      font-size: 12px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: #888;
-      margin-bottom: 80px;
-    }
-    .name {
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 300;
-      font-size: clamp(56px, 10vw, 110px);
-      line-height: 0.9;
-      margin-bottom: 4px;
-    }
-    .name-script {
-      font-family: 'Caveat', cursive;
-      font-weight: 400;
-      font-size: clamp(56px, 10vw, 110px);
-      line-height: 1;
-    }
-    .line {
-      width: 40px;
-      height: 1px;
-      background: #888;
-      margin: 40px auto;
-    }
-    .tagline {
-      font-size: 11px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: #888;
-      margin-bottom: 60px;
-    }
-    .coming {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-size: clamp(18px, 2.5vw, 24px);
-      font-weight: 300;
-      color: #444;
-      margin-bottom: 40px;
-    }
-    .email {
-      font-size: 12px;
-      letter-spacing: 0.1em;
-      color: #111;
-      text-decoration: none;
-      border-bottom: 1px solid #111;
-      padding-bottom: 2px;
-    }
-    .footer {
-      position: fixed;
-      bottom: 24px;
-      font-size: 10px;
-      color: #aaa;
-      letter-spacing: 0.1em;
-    }
-  </style>
+
+  <!-- ── SEO ──────────────────────────────────────────────────
+       MODIFIE : le titre et la description de la page         -->
+  <title>Léa Hattab — Graphic &amp; UX/UI Designer</title>
+  <meta name="description" content="Portfolio de Léa Hattab, graphiste et designer UX/UI. Identité visuelle, branding, web design.">
+  <meta name="author" content="Léa Hattab">
+  <meta property="og:title" content="Léa Hattab — Graphic &amp; UX/UI Designer">
+  <meta property="og:description" content="Portfolio de Léa Hattab, graphiste et designer UX/UI.">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
-  <div class="logo">L.H</div>
-  <div>
-    <div class="name">Léa</div>
-    <div class="name-script">Hattab</div>
-  </div>
-  <div class="line"></div>
-  <div class="tagline">Graphic &amp; UX/UI Designer</div>
-  <p class="coming">Something beautiful is coming soon.</p>
-  <a href="mailto:lczayache@gmail.com" class="email">lczayache@gmail.com</a>
-  <div class="footer">© 2026 Léa Hattab</div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       HEADER
+       ══════════════════════════════════════════════════════════ -->
+  <header class="header" role="banner">
+    <a href="index.html" class="header__logo" aria-label="Léa Hattab — Accueil">
+      Léa <span>&amp;</span> Hattab
+    </a>
+    <nav aria-label="Navigation principale">
+      <ul class="header__nav">
+        <!-- MODIFIE : les liens du menu -->
+        <li><a href="work.html">Work</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="header__burger" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <ul class="mobile-nav" aria-label="Navigation mobile">
+    <li><a href="work.html">Work</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+
+  <main>
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 1 — HERO
+         ══════════════════════════════════════════════════════ -->
+    <section class="hero" aria-label="Présentation">
+      <div class="hero__inner">
+
+        <div class="hero__content">
+          <div class="section-label">
+            <!-- MODIFIE : ton métier -->
+            Graphic &amp; UX/UI Designer
+          </div>
+
+          <h1 class="hero__title" aria-label="Léa Hattab">
+            <!-- MODIFIE : ton prénom et nom -->
+            <span class="line-1">Léa</span>
+            <span class="line-2">Hattab</span>
+          </h1>
+
+          <p class="hero__body">
+            <!-- MODIFIE : ton texte d'accroche -->
+            Je crée des identités visuelles et des expériences digitales qui ont du sens.
+            Du branding au web design, je travaille avec vous pour donner vie à vos idées.
+          </p>
+
+          <div class="hero__buttons">
+            <a href="index.html#contact" class="btn btn--dark">Let's work together?</a>
+            <a href="work.html" class="btn btn--outline">Portfolio</a>
+          </div>
+        </div>
+
+        <!-- Grille d'images droite
+             MODIFIE : remplace les divs par tes vraies images
+             <img src="images/hero-1.jpg" alt="Description de l'image"> -->
+        <div class="hero__images" aria-hidden="true">
+          <div class="hero__img-placeholder"></div>
+          <div class="hero__img-placeholder"></div>
+          <div class="hero__img-placeholder"></div>
+        </div>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">Scroll</div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 2 — PROJETS (fond sombre)
+         ══════════════════════════════════════════════════════ -->
+    <section class="projects-section" aria-label="Projets">
+
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker__track">
+          <span class="ticker__text">Branding · UX/UI Design · Identité Visuelle · Motion · Print · Direction Artistique · </span>
+        </div>
+      </div>
+
+      <!-- ─────────────────────────────────────────────────────
+           LISTE DES PROJETS
+           • AJOUTER un projet  → copie un bloc <a> et modifie-le
+           • MASQUER un projet  → ajoute  style="display:none"
+           • CHANGER L'ORDRE   → déplace le bloc <a>
+           ───────────────────────────────────────────────────── -->
+      <nav class="projects-list" aria-label="Liste des projets">
+
+        <a href="projects/chez-suzanne.html" class="projects-list__item animate-on-scroll">
+          <div class="projects-list__left">
+            <span class="projects-list__num" aria-hidden="true">·</span>
+            <span class="projects-list__title">Chez Suzanne</span>
+          </div>
+          <div class="projects-list__right">
+            <span class="projects-list__tag">Branding</span>
+            <span class="projects-list__year">2026</span>
+            <span class="projects-list__arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+
+        <a href="projects/transformit.html" class="projects-list__item animate-on-scroll delay-1">
+          <div class="projects-list__left">
+            <span class="projects-list__num" aria-hidden="true">·</span>
+            <span class="projects-list__title">TransformIT</span>
+          </div>
+          <div class="projects-list__right">
+            <span class="projects-list__tag">UX/UI Design</span>
+            <span class="projects-list__year">2026</span>
+            <span class="projects-list__arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+
+        <!-- COPIE CE BLOC POUR AJOUTER UN PROJET :
+        <a href="projects/mon-projet.html" class="projects-list__item animate-on-scroll">
+          <div class="projects-list__left">
+            <span class="projects-list__num" aria-hidden="true">·</span>
+            <span class="projects-list__title">Nom du projet</span>
+          </div>
+          <div class="projects-list__right">
+            <span class="projects-list__tag">Catégorie</span>
+            <span class="projects-list__year">2026</span>
+            <span class="projects-list__arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+        -->
+
+      </nav>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 3 — ABOUT ME
+         ══════════════════════════════════════════════════════ -->
+    <section class="about-section" id="about" aria-label="À propos">
+      <div class="about-section__inner">
+
+        <div>
+          <div class="section-label animate-on-scroll">About me</div>
+          <span class="about-section__greeting" aria-hidden="true">Hey,</span>
+          <h2 class="about-section__title animate-on-scroll">
+            <!-- MODIFIE : ta phrase -->
+            Je suis Léa,<br>
+            <em>Graphiste</em> &amp; Designer
+          </h2>
+        </div>
+
+        <div class="animate-on-scroll">
+          <!-- MODIFIE : ton texte de présentation -->
+          <div class="about-section__text">
+            <p>
+              Passionnée par la création visuelle depuis toujours, je conçois des identités de marque,
+              des expériences digitales et des systèmes graphiques qui donnent envie.
+            </p>
+            <p>
+              Je travaille avec des marques qui ont quelque chose à dire — et je les aide à
+              le dire avec style, clarté et cohérence.
+            </p>
+            <p>Basée à Paris, disponible partout.</p>
+          </div>
+
+          <!-- MODIFIE : tes domaines de compétences -->
+          <div class="about-section__tags">
+            <span class="about-section__tag">Branding</span>
+            <span class="about-section__tag">UX/UI Design</span>
+            <span class="about-section__tag">Identité visuelle</span>
+            <span class="about-section__tag">Direction artistique</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       FOOTER — Let's work together + Copyright
+       ══════════════════════════════════════════════════════════ -->
+  <footer id="contact">
+
+    <div class="footer-cta">
+      <div class="section-label section-label--light animate-on-scroll">
+        Let's work together?
+      </div>
+
+      <span class="footer-cta__title animate-on-scroll" aria-hidden="true">
+        let's do this !
+      </span>
+
+      <div class="footer-cta__email-wrap animate-on-scroll">
+        <!-- MODIFIE : ton adresse email (aux 2 endroits) -->
+        <a href="mailto:Lczayache@gmail.com" class="footer-cta__email">
+          Lczayache@gmail.com
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <!-- MODIFIE : le copyright -->
+      <p class="footer-bar__copy">© 2026 Léa Hattab — All rights reserved</p>
+      <nav aria-label="Navigation footer">
+        <ul class="footer-bar__nav">
+          <li><a href="work.html">Work</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+  </footer>
+
+  <button class="back-to-top" aria-label="Retourner en haut de la page">↑</button>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
 </body>
 </html>

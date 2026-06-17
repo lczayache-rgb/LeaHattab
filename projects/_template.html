@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ════════════════════════════════════════════════════════════
+       MODÈLE DE PAGE PROJET — COPIE CE FICHIER POUR CRÉER UN PROJET
+
+       Comment l'utiliser :
+       1. Copie ce fichier et renomme-le  (ex: mon-projet.html)
+       2. Cherche tous les commentaires "MODIFIE" et change le contenu
+       3. Ajoute tes images dans images/projects/mon-projet/
+       4. Ajoute un lien vers ce fichier dans index.html ET work.html
+       ════════════════════════════════════════════════════════════ -->
+
+  <!-- MODIFIE : titre affiché dans l'onglet du navigateur -->
+  <title>Nom du projet — Léa Hattab</title>
+  <meta name="description" content="Description courte du projet — Léa Hattab.">
+
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/project.css">
+</head>
+<body>
+
+  <!-- HEADER (ne pas modifier) -->
+  <header class="header" role="banner">
+    <a href="../index.html" class="header__logo">Léa <span>&amp;</span> Hattab</a>
+    <nav aria-label="Navigation principale">
+      <ul class="header__nav">
+        <li><a href="../work.html">Work</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="header__burger" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+  <ul class="mobile-nav">
+    <li><a href="../work.html">Work</a></li>
+    <li><a href="../index.html#about">About</a></li>
+    <li><a href="../index.html#contact">Contact</a></li>
+  </ul>
+
+  <main>
+
+    <!-- ── BREADCRUMB ──────────────────────────────────────────
+         MODIFIE : la catégorie, le type et l'année             -->
+    <div class="project-breadcrumb">
+      <span class="project-breadcrumb__item">Catégorie</span>
+      <span class="project-breadcrumb__item">Sous-catégorie</span>
+      <span class="project-breadcrumb__item">2026</span>
+      <span class="project-breadcrumb__item project-breadcrumb__item--cursive">case study</span>
+    </div>
+
+    <!-- ── HERO PROJET ──────────────────────────────────────── -->
+    <div class="project-hero">
+      <div class="section-label project-hero__label">
+        <!-- MODIFIE : la catégorie (ex: Branding, UX/UI Design…) -->
+        Catégorie
+      </div>
+
+      <!-- MODIFIE : le titre du projet en majuscules -->
+      <h1 class="project-hero__title">NOM DU PROJET</h1>
+
+      <!-- MODIFIE : une phrase de description courte et percutante -->
+      <p class="project-hero__subtitle">
+        Description courte et percutante du projet en une ou deux phrases.
+      </p>
+
+      <div class="project-hero__buttons">
+        <!-- Décommente si tu as un lien vers le site live :
+        <a href="https://..." target="_blank" rel="noopener" class="btn btn--dark">Voir le site →</a>
+        -->
+        <a href="../work.html" class="btn btn--outline">← Retour au portfolio</a>
+      </div>
+    </div>
+
+    <!-- ── IMAGE COVER PRINCIPALE ──────────────────────────────
+         MODIFIE : remplace le div gris par ton image
+         <img src="../images/projects/mon-projet/cover.jpg"
+              alt="Nom du projet — Vue principale"
+              style="width:100%; height:60vh; object-fit:cover;">  -->
+    <div style="background: var(--grey-mid); height: 60vh; width: 100%;"></div>
+
+    <!-- ── BARRE D'INFOS ───────────────────────────────────────
+         MODIFIE : service, secteur, année, lien live            -->
+    <div class="project-info-bar">
+      <div class="project-info-bar__item">
+        <span class="project-info-bar__label">Service</span>
+        <!-- MODIFIE : ex: Brand Identity, UX/UI Design, Motion… -->
+        <span class="project-info-bar__value">Service</span>
+      </div>
+      <div class="project-info-bar__item">
+        <span class="project-info-bar__label">Industry</span>
+        <!-- MODIFIE : ex: Food & Beverage, Tech, Mode… -->
+        <span class="project-info-bar__value">Secteur</span>
+      </div>
+      <div class="project-info-bar__item">
+        <span class="project-info-bar__label">Year</span>
+        <!-- MODIFIE : l'année -->
+        <span class="project-info-bar__value">2026</span>
+      </div>
+      <div class="project-info-bar__item">
+        <span class="project-info-bar__label">View live</span>
+        <!-- MODIFIE : le lien ou mets "—" si pas de lien -->
+        <span class="project-info-bar__value">—</span>
+      </div>
+    </div>
+
+
+    <!-- ════════════════════════════════════════════════════════
+         SECTIONS DU PROJET — MODIFIE LE CONTENU
+         Tu peux supprimer les sections que tu n'utilises pas.
+         ════════════════════════════════════════════════════════ -->
+
+
+    <!-- ── SECTION : HISTOIRE / CONTEXTE (fond sombre) ─────── -->
+    <section class="project-section">
+
+      <div class="section-label section-label--light project-section__label animate-on-scroll">
+        <!-- MODIFIE : titre de la section -->
+        Contexte du projet
+      </div>
+
+      <!-- MODIFIE : titre accentué (em = couleur or) -->
+      <h2 class="project-section__accent-title animate-on-scroll">
+        Titre accentué avec <em>mots clés.</em>
+      </h2>
+
+      <!-- MODIFIE : texte de présentation du projet -->
+      <div class="project-section__text animate-on-scroll">
+        <p>
+          Décris ici le contexte du projet, le client, la problématique de départ.
+          Sois précis et concis — 2 à 3 paragraphes suffisent.
+        </p>
+        <p>
+          Explique pourquoi ce projet existe, ce que le client voulait accomplir,
+          et ce que tu as apporté comme valeur.
+        </p>
+      </div>
+
+    </section>
+
+
+    <!-- ── SECTION : DÉFIS (optionnel) ─────────────────────── -->
+    <section class="project-section">
+
+      <div class="section-label section-label--light project-section__label animate-on-scroll">
+        The Challenge
+      </div>
+
+      <!-- MODIFIE : les 3 défis principaux du projet -->
+      <div class="challenges-list">
+
+        <div class="challenge-item animate-on-scroll">
+          <div class="challenge-item__num" aria-hidden="true">01</div>
+          <div class="challenge-item__content">
+            <!-- MODIFIE : titre et description du défi -->
+            <h3 class="challenge-item__title">Premier défi</h3>
+            <p class="challenge-item__text">
+              Description du premier défi rencontré et comment tu l'as abordé.
+            </p>
+          </div>
+        </div>
+
+        <div class="challenge-item animate-on-scroll delay-1">
+          <div class="challenge-item__num" aria-hidden="true">02</div>
+          <div class="challenge-item__content">
+            <h3 class="challenge-item__title">Deuxième défi</h3>
+            <p class="challenge-item__text">
+              Description du deuxième défi rencontré et comment tu l'as abordé.
+            </p>
+          </div>
+        </div>
+
+        <!-- Ajoute ou supprime des blocs selon le nombre de défis -->
+
+      </div>
+    </section>
+
+
+    <!-- ── SECTION : PROCESSUS (optionnel) ─────────────────── -->
+    <section class="project-section">
+
+      <div class="section-label section-label--light project-section__label animate-on-scroll">
+        My Process
+      </div>
+
+      <h2 class="project-section__accent-title animate-on-scroll">
+        How I Approached <em>IT</em>
+      </h2>
+
+      <!-- MODIFIE : tes 4 étapes de processus -->
+      <div class="process-grid animate-on-scroll">
+
+        <div class="process-card">
+          <div class="process-card__num" aria-hidden="true">01</div>
+          <h3 class="process-card__title">Étape 1</h3>
+          <p class="process-card__text">Description de l'étape.</p>
+          <!-- MODIFIE : le tag -->
+          <span class="process-card__tag">tag</span>
+        </div>
+
+        <div class="process-card process-card--dark">
+          <div class="process-card__num" aria-hidden="true">02</div>
+          <h3 class="process-card__title">Étape 2</h3>
+          <p class="process-card__text">Description de l'étape.</p>
+          <span class="process-card__tag">tag</span>
+        </div>
+
+        <div class="process-card process-card--dark">
+          <div class="process-card__num" aria-hidden="true">03</div>
+          <h3 class="process-card__title">Étape 3</h3>
+          <p class="process-card__text">Description de l'étape.</p>
+          <span class="process-card__tag">tag</span>
+        </div>
+
+        <div class="process-card">
+          <div class="process-card__num" aria-hidden="true">04</div>
+          <h3 class="process-card__title">Étape 4</h3>
+          <p class="process-card__text">Description de l'étape.</p>
+          <span class="process-card__tag">tag</span>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ── SECTION : IMAGES / MOCKUPS ───────────────────────── -->
+    <section class="mockups-section">
+
+      <div class="section-label section-label--light animate-on-scroll">
+        <!-- MODIFIE : titre de la section images -->
+        Mock-ups
+      </div>
+
+      <!-- MODIFIE : remplace le div gris par ton image principale
+           <img src="../images/projects/mon-projet/mockup-1.jpg"
+                alt="Nom du projet — Mockup principal"
+                style="width:100%; display:block;">               -->
+      <div class="mockup-large animate-on-scroll" style="height: 500px; background: var(--grey-light);"></div>
+
+      <!-- Images secondaires (optionnel) -->
+      <div class="mockup-row animate-on-scroll">
+        <!-- MODIFIE : tes images secondaires -->
+        <div class="mockup-small" style="background: var(--grey-mid);"></div>
+        <div class="mockup-small" style="background: #d9d9d9;"></div>
+      </div>
+
+    </section>
+
+
+    <!-- ── SECTION : TÉMOIGNAGE (optionnel) ─────────────────── -->
+    <!-- SUPPRIME CETTE SECTION ENTIÈRE si tu n'as pas de témoignage -->
+    <section class="testimonial">
+
+      <blockquote class="testimonial__quote animate-on-scroll">
+        <!-- MODIFIE : la citation du client (entre guillemets) -->
+        "Citation du client sur le projet et la collaboration."
+      </blockquote>
+
+      <div class="testimonial__person animate-on-scroll">
+        <div class="testimonial__avatar">
+          <!-- MODIFIE : photo du client (optionnel)
+               <img src="../images/projects/mon-projet/client.jpg" alt=""> -->
+        </div>
+        <div>
+          <!-- MODIFIE : prénom nom et rôle du client -->
+          <p class="testimonial__name">Prénom Nom</p>
+          <p class="testimonial__role">Rôle, Entreprise</p>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- ── NEXT PROJECT ───────────────────────────────────────── -->
+    <section class="next-project">
+      <span class="next-project__word" aria-hidden="true">project</span>
+      <span class="next-project__label">Projet suivant</span>
+      <!-- MODIFIE : lien et nom du prochain projet -->
+      <a href="autre-projet.html" class="next-project__link">
+        <span class="next-project__name">Nom du prochain projet →</span>
+      </a>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER (ne pas modifier) -->
+  <footer id="contact">
+    <div class="footer-cta">
+      <div class="section-label section-label--light animate-on-scroll">
+        Let's work together?
+      </div>
+      <span class="footer-cta__title animate-on-scroll" aria-hidden="true">
+        let's do this !
+      </span>
+      <div class="footer-cta__email-wrap animate-on-scroll">
+        <a href="mailto:Lczayache@gmail.com" class="footer-cta__email">
+          Lczayache@gmail.com
+        </a>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <p class="footer-bar__copy">© 2026 Léa Hattab — All rights reserved</p>
+      <nav aria-label="Navigation footer">
+        <ul class="footer-bar__nav">
+          <li><a href="../work.html">Work</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Retourner en haut de la page">↑</button>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/animations.js"></script>
+</body>
+</html>

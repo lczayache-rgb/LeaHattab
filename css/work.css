@@ -1,0 +1,169 @@
+/* ============================================================
+   WORK.CSS — Styles de la page portfolio (work.html)
+   ============================================================ */
+
+.work-hero {
+  margin-top: var(--header-height);
+  background: var(--bg-light);
+  padding: var(--section-pad) var(--side-margin);
+  padding-bottom: 60px;
+}
+
+.work-hero__title {
+  font-family: var(--font-main);
+  font-weight: 800;
+  font-size: clamp(60px, 10vw, 130px);
+  letter-spacing: 20px;
+  text-transform: uppercase;
+  color: var(--text-dark);
+  line-height: 1;
+}
+
+.work-hero__sub {
+  font-family: var(--font-body);
+  font-size: 18px;
+  color: var(--text-grey);
+  margin-top: 24px;
+  max-width: 500px;
+}
+
+/* Filtres catégories */
+.work-filters {
+  background: var(--bg-light);
+  padding: 0 var(--side-margin) 48px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.work-filter {
+  font-family: var(--font-cursive);
+  font-size: 14px;
+  padding: 8px 20px;
+  border: 1px solid rgba(29, 29, 29, 0.3);
+  border-radius: 26px;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: all var(--transition);
+  background: transparent;
+}
+
+.work-filter:hover,
+.work-filter.active {
+  background: var(--bg-dark);
+  color: var(--text-light);
+  border-color: var(--bg-dark);
+}
+
+/* Grille projets */
+.work-grid {
+  background: var(--bg-off-white);
+  padding: 60px var(--side-margin) var(--section-pad);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.project-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-card);
+  background: var(--grey-light);
+  aspect-ratio: 4 / 3;
+}
+
+.project-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.project-card__placeholder {
+  width: 100%;
+  height: 100%;
+  background: var(--grey-light);
+  transition: transform 0.6s ease;
+}
+
+.project-card:nth-child(2) .project-card__placeholder { background: var(--grey-mid); }
+.project-card:nth-child(3) .project-card__placeholder { background: #d9d9d9; }
+.project-card:nth-child(4) .project-card__placeholder { background: var(--bg-warm); }
+
+.project-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(29, 29, 29, 0.85);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 28px;
+  opacity: 0;
+  transition: opacity var(--transition-slow);
+}
+
+.project-card:hover .project-card__overlay {
+  opacity: 1;
+}
+
+.project-card:hover .project-card__image,
+.project-card:hover .project-card__placeholder {
+  transform: scale(1.04);
+}
+
+.project-card__category {
+  font-family: var(--font-main);
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-muted-light);
+  margin-bottom: 8px;
+}
+
+.project-card__title {
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 16px;
+}
+
+.project-card__cta {
+  font-family: var(--font-cursive);
+  font-size: 15px;
+  color: var(--accent-brown);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Carte featured (grande) */
+.project-card--featured {
+  grid-column: span 2;
+  aspect-ratio: 16 / 9;
+}
+
+@media (max-width: 1024px) {
+  .work-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .project-card--featured {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+  .project-card--featured {
+    grid-column: span 1;
+    aspect-ratio: 4 / 3;
+  }
+}

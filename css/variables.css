@@ -1,0 +1,52 @@
+/* ============================================================
+   VARIABLES — Léa Hattab Portfolio
+   Tu peux modifier les couleurs, polices et espacements ici.
+   Toutes les pages du site utilisent ces variables automatiquement.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Homemade+Apple&family=Kumbh+Sans:wght@400;600&family=Assistant:wght@400;600&display=swap');
+
+:root {
+
+  /* ── COULEURS PRINCIPALES ─────────────────────────────────
+     Modifie ces valeurs pour changer les couleurs du site.   */
+
+  --bg-light:      #f1f3ea;  /* Fond principal (vert crème très doux)      */
+  --bg-off-white:  #f9fbf5;  /* Fond secondaire (blanc cassé légèrement vert) */
+  --bg-warm:       #f1ece0;  /* Fond beige chaud (sections projets)        */
+  --bg-dark:       #1d1d1d;  /* Fond sombre (sections noires)              */
+
+  --text-dark:        #1d1d1d;  /* Texte principal                        */
+  --text-light:       #f1f3ea;  /* Texte sur fond sombre                  */
+  --text-muted-light: #d9d9d9;  /* Texte gris doux sur fond sombre        */
+  --text-grey:        #797c7f;  /* Corps de texte gris sur fond clair      */
+  --accent-brown:     #87622f;  /* Accent or/brun (mots clés dans titres) */
+
+  --grey-mid:   #9099a2;  /* Gris moyen (placeholders images)             */
+  --grey-light: #c5c7c1;  /* Gris clair (placeholders images)             */
+
+  /* ── TYPOGRAPHIES ─────────────────────────────────────────
+     Modifie ici les polices du site.                         */
+
+  --font-main:    'Montserrat', sans-serif;       /* Titres, navigation    */
+  --font-cursive: 'Homemade Apple', cursive;      /* Accents cursifs       */
+  --font-body:    'Kumbh Sans', sans-serif;       /* Corps de texte        */
+  --font-cta:     'Assistant', sans-serif;        /* Boutons CTA           */
+
+  /* ── ESPACEMENTS ─────────────────────────────────────────
+     Les marges et paddings généraux.                         */
+
+  --side-margin:    clamp(40px, 7vw, 128px);   /* Marges latérales         */
+  --section-pad:    clamp(60px, 8vw, 120px);   /* Padding vertical sections */
+  --header-height:  78px;                       /* Hauteur du header        */
+
+  /* ── BOUTONS & FORMES ─────────────────────────────────────ó */
+
+  --radius-btn:  30px;  /* Rayon des boutons                              */
+  --radius-card: 5px;   /* Rayon des cartes                               */
+
+  /* ── TRANSITIONS ──────────────────────────────────────────ó */
+
+  --transition: 0.3s ease;
+  --transition-slow: 0.6s ease;
+}
