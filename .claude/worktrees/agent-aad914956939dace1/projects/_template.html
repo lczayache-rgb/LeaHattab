@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<!--
+  ================================================================
+  TEMPLATE DE PROJET — Léa Hattab Portfolio
+  ================================================================
+
+  COMMENT UTILISER CE TEMPLATE :
+
+  1. Dupliquer ce fichier dans le dossier /projects/
+     → Renommer-le : mon-projet.html
+
+  2. Créer un dossier d'images :
+     → /images/projects/mon-projet/
+     → Y placer vos images : cover.jpg, sketch-1.jpg, sketch-2.jpg,
+       mockup-1.jpg, mockup-2.jpg, mockup-3.jpg
+
+  3. Remplacer TOUS les [MODIFIER: ...] par vos vraies informations
+
+  4. Ajouter le projet à la grille dans work.html
+
+  5. Ajouter le projet à la liste dans index.html
+
+  REMARQUES :
+  - Les div class="img-placeholder" sont à remplacer par de vraies <img>
+  - Toutes les images doivent être en ../images/projects/mon-projet/
+  - Les liens internes vers ../ remontent d'un niveau (projects/ → racine)
+  ================================================================
+-->
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- MODIFIER : Titre de l'onglet du navigateur -->
+  <title>[NOM DU PROJET] — Léa Hattab</title>
+  <!-- MODIFIER : Description pour le référencement -->
+  <meta name="description" content="[Description courte du projet pour le SEO]" />
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/project.css" />
+</head>
+<body>
+
+  <!-- ==================== HEADER (NE PAS MODIFIER) ==================== -->
+  <header>
+    <a href="../index.html" class="logo">Léa <span class="logo-amp">&amp;</span> Hattab</a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="../work.html" class="active">Work</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <nav class="nav-mobile" aria-label="Navigation mobile">
+    <a href="../work.html">Work</a>
+    <a href="../index.html#about">About</a>
+    <a href="../index.html#contact">Contact</a>
+  </nav>
+
+  <main>
+
+    <!-- ==================== BREADCRUMB ==================== -->
+    <!-- MODIFIER : La partie après le séparateur — catégories et année -->
+    <div class="breadcrumb">
+      <a href="../work.html" class="breadcrumb-back">← RETOUR</a>
+      <div class="breadcrumb-sep"></div>
+      <!-- MODIFIER : Type de projet · Sous-type · Année · Type de contenu -->
+      <span class="breadcrumb-info">— [CATÉGORIE] · [SOUS-CATÉGORIE] · [ANNÉE] · CASE STUDY</span>
+    </div>
+
+    <!-- ==================== PROJECT HERO ==================== -->
+    <section class="project-hero">
+      <!-- MODIFIER : Titre principal du projet (majuscules recommandées) -->
+      <h1 class="project-hero-title animate-on-scroll">[NOM DU PROJET]</h1>
+      <!-- MODIFIER : Sous-titre descriptif, 1-2 phrases -->
+      <p class="project-hero-subtitle animate-on-scroll" data-delay="100">
+        [Description courte et percutante du projet en une ou deux phrases.]
+      </p>
+    </section>
+
+    <!-- ==================== INFO BAR ==================== -->
+    <!-- Barre sombre avec 4 informations clés du projet -->
+    <div class="info-bar">
+      <div class="info-item">
+        <p class="info-label">Service</p>
+        <!-- MODIFIER : Type de prestation -->
+        <p class="info-value">[Ex: Branding &amp; Identité]</p>
+      </div>
+      <div class="info-item">
+        <p class="info-label">Industrie</p>
+        <!-- MODIFIER : Secteur du client -->
+        <p class="info-value">[Ex: Food &amp; Beverage]</p>
+      </div>
+      <div class="info-item">
+        <p class="info-label">Année</p>
+        <!-- MODIFIER : Année de réalisation -->
+        <p class="info-value">[ANNÉE]</p>
+      </div>
+      <div class="info-item">
+        <p class="info-label">Statut</p>
+        <!-- MODIFIER : Concept / Réel / En cours -->
+        <p class="info-value">[Concept / Réel]</p>
+      </div>
+    </div>
+
+    <!-- ==================== THE STORY ==================== -->
+    <!-- Section fond clair — contexte du projet -->
+    <section class="section-light">
+      <span class="section-label animate-on-scroll">— The story behind the project</span>
+      <h2 class="section-title animate-on-scroll" data-delay="100">THE STORY BEHIND THE PROJECT</h2>
+      <!-- MODIFIER : 2-4 phrases sur le contexte, le client, et le problème à résoudre -->
+      <p class="story-text animate-on-scroll" data-delay="200">
+        [Décrivez le contexte du projet : qui est le client, quelle est son histoire, quel problème souhaitait-il résoudre ? Soyez précis et concret. 2 à 4 phrases suffisent.]
+      </p>
+    </section>
+
+    <!-- ==================== THE CHALLENGE ==================== -->
+    <!-- Section fond sombre — 3 défis principaux -->
+    <section class="section-dark">
+      <span class="section-label animate-on-scroll">— The challenge</span>
+      <h2 class="section-title animate-on-scroll" data-delay="100">THE CHALLENGE</h2>
+      <div class="challenges-grid">
+
+        <!-- MODIFIER : Défi 1 -->
+        <div class="challenge-item animate-on-scroll" data-delay="100">
+          <span class="challenge-ghost-num">01</span>
+          <p class="challenge-num">01</p>
+          <!-- MODIFIER : Titre court du défi (5 mots max) -->
+          <h3 class="challenge-title">[Titre du défi 1]</h3>
+          <!-- MODIFIER : Description du défi en 2-3 phrases -->
+          <p class="challenge-desc">[Description du défi 1 : quel obstacle technique, stratégique ou créatif avez-vous dû surmonter ?]</p>
+        </div>
+
+        <!-- MODIFIER : Défi 2 -->
+        <div class="challenge-item animate-on-scroll" data-delay="200">
+          <span class="challenge-ghost-num">02</span>
+          <p class="challenge-num">02</p>
+          <h3 class="challenge-title">[Titre du défi 2]</h3>
+          <p class="challenge-desc">[Description du défi 2]</p>
+        </div>
+
+        <!-- MODIFIER : Défi 3 -->
+        <div class="challenge-item animate-on-scroll" data-delay="300">
+          <span class="challenge-ghost-num">03</span>
+          <p class="challenge-num">03</p>
+          <h3 class="challenge-title">[Titre du défi 3]</h3>
+          <p class="challenge-desc">[Description du défi 3]</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== PROCESS ==================== -->
+    <!-- Section fond clair — 4 étapes de la démarche -->
+    <section class="section-light">
+      <span class="section-label animate-on-scroll">— How I approached it</span>
+      <h2 class="section-title animate-on-scroll" data-delay="100">HOW I APPROACHED IT</h2>
+      <div class="process-grid">
+
+        <!-- MODIFIER : Étape 1 -->
+        <div class="process-step animate-on-scroll" data-delay="100">
+          <p class="process-step-num">01</p>
+          <!-- MODIFIER : Nom de l'étape -->
+          <h3 class="process-step-title">[Étape 1 — Ex: Benchmark]</h3>
+          <!-- MODIFIER : Description de ce que vous avez fait -->
+          <p class="process-step-desc">[Décrivez votre démarche pour cette étape.]</p>
+        </div>
+
+        <!-- MODIFIER : Étape 2 -->
+        <div class="process-step animate-on-scroll" data-delay="200">
+          <p class="process-step-num">02</p>
+          <h3 class="process-step-title">[Étape 2 — Ex: Brief &amp; Stratégie]</h3>
+          <p class="process-step-desc">[Décrivez votre démarche pour cette étape.]</p>
+        </div>
+
+        <!-- MODIFIER : Étape 3 -->
+        <div class="process-step animate-on-scroll" data-delay="300">
+          <p class="process-step-num">03</p>
+          <h3 class="process-step-title">[Étape 3 — Ex: Maquettes]</h3>
+          <p class="process-step-desc">[Décrivez votre démarche pour cette étape.]</p>
+        </div>
+
+        <!-- MODIFIER : Étape 4 -->
+        <div class="process-step animate-on-scroll" data-delay="400">
+          <p class="process-step-num">04</p>
+          <h3 class="process-step-title">[Étape 4 — Ex: UI Design]</h3>
+          <p class="process-step-desc">[Décrivez votre démarche pour cette étape.]</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== SKETCHES ==================== -->
+    <!-- Section fond sombre — visuels de processus, croquis, wireframes -->
+    <section class="section-dark">
+      <span class="section-label animate-on-scroll">— Sketches &amp; explorations</span>
+      <h2 class="section-title animate-on-scroll" data-delay="100">SKETCHES</h2>
+      <div class="sketches-grid">
+        <!-- MODIFIER : Remplacer par de vraies images -->
+        <!-- <img src="../images/projects/mon-projet/sketch-1.jpg" alt="Croquis 1" style="width:100%; height:320px; object-fit:cover; border-radius:var(--radius-card);"> -->
+        <div class="img-placeholder animate-on-scroll" data-delay="100"></div>
+        <!-- <img src="../images/projects/mon-projet/sketch-2.jpg" alt="Croquis 2" style="width:100%; height:320px; object-fit:cover; border-radius:var(--radius-card);"> -->
+        <div class="img-placeholder animate-on-scroll" data-delay="200"></div>
+      </div>
+    </section>
+
+    <!-- ==================== DESIGN DECISIONS ==================== -->
+    <!-- Section fond clair — 3 décisions de design importantes -->
+    <section class="section-light">
+      <span class="section-label animate-on-scroll">— Key design decisions</span>
+      <h2 class="section-title animate-on-scroll" data-delay="100">KEY DESIGN DECISIONS</h2>
+      <div class="decisions-grid">
+
+        <!-- MODIFIER : Décision 1 -->
+        <div class="decision-card animate-on-scroll" data-delay="100">
+          <!-- MODIFIER : Catégorie de la décision (Typographie, Couleurs, Layout, etc.) -->
+          <span class="decision-tag">[Catégorie]</span>
+          <!-- MODIFIER : Titre de la décision -->
+          <h3 class="decision-title">[Titre de la décision 1]</h3>
+          <!-- MODIFIER : Explication du choix et de son impact -->
+          <p class="decision-desc">[Pourquoi avez-vous fait ce choix ? Quel impact a-t-il sur le projet ?]</p>
+        </div>
+
+        <!-- MODIFIER : Décision 2 -->
+        <div class="decision-card animate-on-scroll" data-delay="200">
+          <span class="decision-tag">[Catégorie]</span>
+          <h3 class="decision-title">[Titre de la décision 2]</h3>
+          <p class="decision-desc">[Explication]</p>
+        </div>
+
+        <!-- MODIFIER : Décision 3 -->
+        <div class="decision-card animate-on-scroll" data-delay="300">
+          <span class="decision-tag">[Catégorie]</span>
+          <h3 class="decision-title">[Titre de la décision 3]</h3>
+          <p class="decision-desc">[Explication]</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== TAKEAWAYS ==================== -->
+    <!-- Section fond sombre — 3 apprentissages du projet -->
+    <section class="section-dark">
+      <span class="section-label animate-on-scroll">— Key takeaways</span>
+      <h2 class="section-title animate-on-scroll" data-delay="100">KEY TAKEAWAYS</h2>
+      <div class="takeaways-grid">
+
+        <!-- MODIFIER : Apprentissage 1 -->
+        <div class="takeaway-item animate-on-scroll" data-delay="100">
+          <p class="takeaway-num">01</p>
+          <!-- MODIFIER : Ce que vous avez appris ou retenu de ce projet -->
+          <p class="takeaway-text">[Apprentissage ou enseignement n°1 tiré de ce projet.]</p>
+        </div>
+
+        <!-- MODIFIER : Apprentissage 2 -->
+        <div class="takeaway-item animate-on-scroll" data-delay="200">
+          <p class="takeaway-num">02</p>
+          <p class="takeaway-text">[Apprentissage ou enseignement n°2 tiré de ce projet.]</p>
+        </div>
+
+        <!-- MODIFIER : Apprentissage 3 -->
+        <div class="takeaway-item animate-on-scroll" data-delay="300">
+          <p class="takeaway-num">03</p>
+          <p class="takeaway-text">[Apprentissage ou enseignement n°3 tiré de ce projet.]</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== MOCK-UPS ==================== -->
+    <!-- Section fond clair — visuels finaux du projet -->
+    <section class="section-light">
+      <span class="section-label animate-on-scroll">— Mock-ups</span>
+      <h2 class="section-title animate-on-scroll" data-delay="100">MOCK-UPS</h2>
+      <div class="mockups-grid">
+        <!-- MODIFIER : Remplacer par de vraies images -->
+        <!-- <img src="../images/projects/mon-projet/mockup-1.jpg" alt="Mockup 1" style="width:100%; height:280px; object-fit:cover; border-radius:var(--radius-card);"> -->
+        <div class="img-placeholder animate-on-scroll" data-delay="100"></div>
+        <!-- <img src="../images/projects/mon-projet/mockup-2.jpg" alt="Mockup 2" style="width:100%; height:280px; object-fit:cover; border-radius:var(--radius-card);"> -->
+        <div class="img-placeholder animate-on-scroll" data-delay="200"></div>
+        <!-- <img src="../images/projects/mon-projet/mockup-3.jpg" alt="Mockup 3" style="width:100%; height:280px; object-fit:cover; border-radius:var(--radius-card);"> -->
+        <div class="img-placeholder animate-on-scroll" data-delay="300"></div>
+      </div>
+    </section>
+
+    <!-- ==================== TESTIMONIAL ==================== -->
+    <!-- Section fond sombre — citation client (optionnelle, supprimer si pas de témoignage) -->
+    <section class="testimonial-section">
+      <!-- MODIFIER : Citation du client (sans guillemets, ils sont ajoutés en CSS) -->
+      <p class="testimonial-quote animate-on-scroll">
+        [Citation du client ou de la personne qui a évalué le projet.]
+      </p>
+      <!-- Avatar : div placeholder ou vraie photo ronde -->
+      <div class="testimonial-avatar animate-on-scroll" data-delay="100"></div>
+      <!-- MODIFIER : Prénom et nom -->
+      <p class="testimonial-name animate-on-scroll" data-delay="150">[Prénom Nom]</p>
+      <!-- MODIFIER : Rôle et entreprise -->
+      <p class="testimonial-role animate-on-scroll" data-delay="200">[Rôle], [Entreprise]</p>
+    </section>
+
+    <!-- ==================== NEXT PROJECT ==================== -->
+    <!-- Lien vers le projet suivant -->
+    <section class="next-project-section">
+      <p class="next-label animate-on-scroll">Projet suivant</p>
+      <span class="next-cursive animate-on-scroll" data-delay="100">project</span>
+      <!-- MODIFIER : href = lien vers le fichier HTML du projet suivant, texte = nom du projet suivant -->
+      <a href="[nom-du-projet-suivant].html" class="next-title animate-on-scroll" data-delay="200">[NOM PROJET SUIVANT] →</a>
+    </section>
+
+    <!-- ==================== FOOTER (NE PAS MODIFIER LE STYLE) ==================== -->
+    <section style="background: var(--bg-dark); padding: var(--section-padding) var(--side-margin);">
+      <span class="section-label animate-on-scroll" style="color: var(--text-muted-light);">— Contact</span>
+      <span class="animate-on-scroll" data-delay="100" style="font-family: var(--font-cursive); font-size: clamp(40px,5vw,70px); color: var(--text-light); display: block; margin: 24px 0 32px;">let's do this !</span>
+      <!-- MODIFIER : Votre email -->
+      <a href="mailto:Lczayache@gmail.com" style="font-family: var(--font-main); font-weight: 300; font-size: clamp(14px,2vw,22px); letter-spacing: 6px; text-decoration: underline; color: var(--text-muted-light); transition: color 0.3s ease;">Lczayache@gmail.com</a>
+      <div style="width: 100%; height: 1px; background: rgba(255,255,255,0.2); margin: 60px 0 32px;"></div>
+      <div class="footer-bar">
+        <p class="footer-text">© 2026 Léa Hattab — Tous droits réservés</p>
+        <ul class="footer-nav">
+          <li><a href="../work.html">Work</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="mailto:Lczayache@gmail.com">Contact</a></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <button id="back-to-top" aria-label="Retour en haut">↑</button>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/animations.js"></script>
+</body>
+</html>

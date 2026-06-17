@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Léa Hattab — Graphic &amp; UX/UI Designer</title>
+  <meta name="description" content="Portfolio de Léa Hattab, designer graphique et UX/UI basée en France." />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header>
+    <a href="index.html" class="logo">Léa <span class="logo-amp">&amp;</span> Hattab</a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="work.html">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- Mobile nav -->
+  <nav class="nav-mobile" aria-label="Navigation mobile">
+    <a href="work.html">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+
+    <!-- ==================== SECTION 1 : HERO ==================== -->
+    <section class="hero">
+      <div class="hero-left">
+        <span class="section-label">— Graphic &amp; UX/UI Designer</span>
+
+        <div class="hero-title">
+          <span class="hero-title-line line-1 animate-on-scroll" data-delay="100">LÉA</span>
+          <span class="hero-title-line line-2 animate-on-scroll" data-delay="200">HATTAB</span>
+        </div>
+
+        <p class="hero-bio animate-on-scroll" data-delay="300">
+          Bienvenue dans mon univers créatif. Je conçois des expériences visuelles qui allient esthétique et fonctionnalité, de l'identité visuelle au design d'interface.
+        </p>
+
+        <div class="hero-buttons animate-on-scroll" data-delay="400">
+          <a href="work.html" class="btn btn-dark">Voir mes projets</a>
+          <a href="#contact" class="btn btn-outline">Me contacter</a>
+        </div>
+      </div>
+
+      <!-- Image grid (droite) -->
+      <div class="hero-right animate-on-scroll" data-delay="200">
+        <div class="img-placeholder"></div>
+        <div class="img-placeholder"></div>
+        <div class="img-placeholder"></div>
+        <div class="img-placeholder"></div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="scroll-indicator">Scroll</div>
+    </section>
+
+    <!-- ==================== SECTION 2 : PROJETS (FOND SOMBRE) ==================== -->
+    <section class="projects-section">
+      <!-- Ticker défilant -->
+      <div class="ticker-wrapper" aria-hidden="true">
+        <div class="ticker-track">
+          <span>BRANDING · UX/UI DESIGN · IDENTITY · MOTION · PRINT ·&nbsp;</span>
+          <span>BRANDING · UX/UI DESIGN · IDENTITY · MOTION · PRINT ·&nbsp;</span>
+          <span>BRANDING · UX/UI DESIGN · IDENTITY · MOTION · PRINT ·&nbsp;</span>
+          <span>BRANDING · UX/UI DESIGN · IDENTITY · MOTION · PRINT ·&nbsp;</span>
+        </div>
+      </div>
+
+      <div class="projects-list-wrapper">
+        <span class="section-label animate-on-scroll">— Projets sélectionnés</span>
+
+        <ul class="project-list">
+          <li>
+            <a href="projects/chez-suzanne.html" class="project-item animate-on-scroll" data-delay="100">
+              <span class="project-num">01</span>
+              <span class="project-name">Chez Suzanne</span>
+              <div class="project-meta">
+                <span class="project-tag">Branding</span>
+                <span class="project-tag">Identité</span>
+                <span class="project-year">2026</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="projects/transformit.html" class="project-item animate-on-scroll" data-delay="200">
+              <span class="project-num">02</span>
+              <span class="project-name">TransformIT</span>
+              <div class="project-meta">
+                <span class="project-tag">UX/UI Design</span>
+                <span class="project-tag">Landing Page</span>
+                <span class="project-year">2026</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+        <a href="work.html" class="view-more-link animate-on-scroll" data-delay="300">View all projects +</a>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 3 : À PROPOS ==================== -->
+    <section class="about-section" id="about">
+      <div class="about-inner">
+        <div class="about-left animate-on-scroll">
+          <span class="section-label">— À propos</span>
+          <span class="about-greeting">Hey,</span>
+          <h2 class="about-name">Léa Hattab</h2>
+        </div>
+        <div class="about-right animate-on-scroll" data-delay="200">
+          <p class="about-text">
+            Je suis une designer graphique et UX/UI passionnée par la création d'identités visuelles fortes et d'interfaces intuitives. Avec un œil pour le détail et une approche centrée sur l'utilisateur, je transforme des concepts en expériences visuelles mémorables. Mon travail s'étend du branding à la conception d'interfaces numériques, toujours avec le souci de l'esthétique et de la fonctionnalité.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 4 : CONTACT ==================== -->
+    <section class="contact-section" id="contact">
+      <span class="section-label animate-on-scroll">— Contact</span>
+      <span class="contact-cursive animate-on-scroll" data-delay="100">let's do this !</span>
+      <a href="mailto:Lczayache@gmail.com" class="contact-email animate-on-scroll" data-delay="200">Lczayache@gmail.com</a>
+
+      <div class="separator-light" style="margin: 60px 0 32px;"></div>
+
+      <div class="footer-bar">
+        <p class="footer-text">© 2026 Léa Hattab — Tous droits réservés</p>
+        <ul class="footer-nav">
+          <li><a href="work.html">Work</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="mailto:Lczayache@gmail.com">Contact</a></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Bouton retour en haut -->
+  <button id="back-to-top" aria-label="Retour en haut">↑</button>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>
