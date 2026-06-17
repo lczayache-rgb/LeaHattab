@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chez Suzanne — Case Study | Léa Hattab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:#0a0a0a;color:#f0ebe0;overflow-x:hidden;}
+
+:root{
+  --blue:#1a3a6b;
+  --blue-vivid:#1616b4;
+  --cream:#f2ece0;
+  --gold:#c9b882;
+  --dark:#0a0a0a;
+  --mid:#0d0d0d;
+  --border:#1c1c1c;
+  --muted:#5a5550;
+}
+
+/* ── NAV ───────────────────────────────── */
+.cs-nav{
+  position:sticky;top:0;z-index:100;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:18px 48px;
+  background:rgba(10,10,10,0.94);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);
+}
+.cs-nav-logo{
+  font-family:'Syne',sans-serif;font-weight:800;font-size:13px;
+  letter-spacing:0.12em;color:#f0ebe0;text-decoration:none;
+}
+.cs-nav-links{display:flex;gap:32px;}
+.cs-nav-links a{
+  font-size:11px;letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--muted);text-decoration:none;transition:color .3s;
+}
+.cs-nav-links a:hover{color:var(--gold);}
+
+/* ── SECTION TYPES ─────────────────────── */
+.s-dark {background:var(--dark); padding:100px 48px;}
+.s-mid  {background:var(--mid);  padding:100px 48px; border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.s-blue {background:var(--blue); padding:100px 48px;}
+.s-cream{background:var(--cream);padding:100px 48px;color:#111;}
+
+/* ── LABEL ─────────────────────────────── */
+.lbl{
+  font-size:10px;letter-spacing:0.32em;text-transform:uppercase;
+  color:var(--gold);display:flex;align-items:center;gap:14px;margin-bottom:20px;
+}
+.lbl::before{content:'';width:28px;height:1px;background:var(--gold);flex-shrink:0;}
+.lbl-blue{color:var(--blue-vivid);}
+.lbl-blue::before{background:var(--blue-vivid);}
+
+/* ── HERO ──────────────────────────────── */
+.hero-cs{
+  min-height:100vh;
+  display:grid;grid-template-rows:1fr auto;
+  padding:120px 48px 0;
+  position:relative;overflow:hidden;
+  background:var(--dark);
+}
+.hero-cs-bg{
+  position:absolute;inset:0;
+  background:radial-gradient(ellipse at 60% 40%,rgba(22,22,180,0.08) 0%,transparent 60%);
+  pointer-events:none;
+}
+.hero-meta{
+  display:flex;gap:24px;
+  font-size:10px;letter-spacing:0.25em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:28px;
+}
+.hero-cs-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(80px,14vw,180px);
+  font-weight:300;line-height:0.86;
+  color:#f0ebe0;margin-bottom:40px;
+}
+.hero-cs-title em{font-style:italic;color:var(--gold);}
+.hero-tagline{
+  font-size:14px;font-weight:300;line-height:1.8;
+  color:rgba(240,235,224,0.55);max-width:440px;margin-bottom:60px;
+}
+.hero-bottom-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:2px;margin:0 -48px;
+}
+.hero-stat{
+  background:#0d0d0d;border:1px solid var(--border);border-bottom:none;
+  padding:24px 28px;
+}
+.hs-label{font-size:9px;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+.hs-val{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:#f0ebe0;}
+.hs-sub{font-size:11px;color:var(--muted);margin-top:3px;}
+
+/* ── PLACEHOLDER IMAGES ────────────────── */
+.ph{
+  background:#0f0f0f;border:1px dashed #262626;
+  display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:10px;padding:40px;
+  text-align:center;position:relative;overflow:hidden;
+}
+.ph-badge{
+  position:absolute;top:12px;left:12px;
+  font-size:9px;letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--muted);border:1px solid var(--border);padding:3px 8px;
+}
+.ph-icon{font-size:28px;opacity:0.25;}
+.ph-title{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);}
+.ph-sub{font-size:11px;color:#3a3530;max-width:280px;line-height:1.6;}
+
+/* ── GRIDS ─────────────────────────────── */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;}
+.grid-2-1{display:grid;grid-template-columns:2fr 1fr;gap:48px;align-items:start;}
+
+/* ── TYPOGRAPHY ────────────────────────── */
+.big-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(40px,5.5vw,80px);
+  font-weight:300;line-height:1.05;
+  color:#f0ebe0;margin-bottom:28px;
+}
+.big-title em{font-style:italic;color:var(--gold);}
+.big-title-cream{color:#111;}
+.big-title-cream em{color:var(--blue-vivid);}
+
+.body-text{font-size:14px;font-weight:300;line-height:1.85;color:rgba(240,235,224,0.6);}
+.body-text-dark{color:#3a3530;}
+
+/* ── STORY ITEMS ───────────────────────── */
+.story-item{
+  padding:36px 0;border-bottom:1px solid var(--border);
+}
+.story-item:last-child{border-bottom:none;}
+.story-label{
+  font-size:9px;letter-spacing:0.28em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:14px;
+}
+.story-text{font-size:14px;font-weight:300;line-height:1.85;color:rgba(240,235,224,0.6);}
+
+/* ── CHALLENGE ROWS ────────────────────── */
+.challenge-row{
+  display:grid;grid-template-columns:64px 1fr;gap:24px;
+  padding:40px 0;border-bottom:1px solid var(--border);
+  align-items:start;
+}
+.challenge-row:last-child{border-bottom:none;}
+.ch-num{
+  font-family:'Syne',sans-serif;font-size:52px;font-weight:800;
+  color:#1c1c1c;line-height:1;
+}
+.ch-content h3{
+  font-size:13px;letter-spacing:0.16em;text-transform:uppercase;
+  color:#f0ebe0;margin-bottom:10px;
+}
+.ch-content p{font-size:13px;font-weight:300;line-height:1.8;color:var(--muted);}
+
+/* ── PROCESS STEPS ─────────────────────── */
+.process-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:2px;margin-top:48px;
+}
+.process-step{
+  background:#0d0d0d;padding:36px 24px;
+  border:1px solid var(--border);
+  border-top:2px solid var(--gold);
+}
+.ps-num{
+  font-family:'Syne',sans-serif;font-size:44px;font-weight:800;
+  color:#1c1c1c;line-height:1;margin-bottom:16px;
+}
+.ps-title{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#f0ebe0;margin-bottom:10px;}
+.ps-text{font-size:12px;font-weight:300;line-height:1.75;color:var(--muted);}
+
+/* ── DECISION CARDS ────────────────────── */
+.decision-card{
+  border:1px solid var(--border);padding:40px 32px;
+  background:#0d0d0d;
+}
+.dc-tag{
+  display:inline-block;
+  font-size:9px;letter-spacing:0.2em;text-transform:uppercase;
+  border:1px solid #2a2a2a;color:var(--muted);padding:4px 10px;
+  margin-top:20px;
+}
+.dc-icon{font-size:28px;margin-bottom:20px;}
+.dc-title{
+  font-family:'Syne',sans-serif;font-size:13px;letter-spacing:0.15em;
+  text-transform:uppercase;color:#f0ebe0;margin-bottom:14px;
+}
+.dc-text{font-size:13px;font-weight:300;line-height:1.8;color:var(--muted);}
+
+/* ── DELIVERABLE CARDS ─────────────────── */
+.deliverable-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;}
+.deliverable-card{
+  background:#0d0d0d;border:1px solid var(--border);
+  border-left:2px solid var(--gold);
+  padding:36px 32px;
+}
+.dl-title{
+  font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:14px;
+}
+.dl-text{font-size:13px;font-weight:300;line-height:1.8;color:var(--muted);}
+
+/* ── QUOTE ─────────────────────────────── */
+.quote-box{
+  border-left:2px solid var(--gold);
+  padding:36px 44px;background:#0d0d0d;margin:48px 0;
+}
+.quote-text{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:clamp(20px,2.5vw,30px);line-height:1.45;
+  color:#f0ebe0;margin-bottom:16px;
+}
+.quote-cite{
+  font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);
+}
+
+/* ── METRICS ───────────────────────────── */
+.metrics-row{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin:40px 0;}
+.metric-card{
+  background:#0d0d0d;border:1px solid var(--border);
+  padding:44px 28px;text-align:center;
+}
+.metric-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:72px;font-weight:300;color:var(--gold);
+  display:block;line-height:1;
+}
+.metric-label{
+  font-size:9px;letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--muted);margin-top:12px;display:block;
+}
+
+/* ── LEARNINGS ─────────────────────────── */
+.learnings-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;}
+.learning-card{
+  background:#0d0d0d;border:1px solid var(--border);
+  padding:36px;transition:border-color .3s;
+}
+.learning-card:hover{border-color:var(--gold);}
+.lc-title{
+  font-size:10px;letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:12px;
+}
+.lc-text{font-size:13px;font-weight:300;line-height:1.8;color:rgba(240,235,224,0.55);}
+
+/* ── BRAND BANNER ──────────────────────── */
+.brand-banner{
+  background:var(--blue-vivid);color:var(--cream);
+  padding:40px 48px;text-align:center;
+}
+.bb-title{
+  font-family:'Syne',sans-serif;font-size:14px;
+  font-weight:700;letter-spacing:0.15em;text-transform:uppercase;
+  margin-bottom:8px;
+}
+.bb-sub{font-size:12px;letter-spacing:0.1em;color:rgba(242,236,224,0.65);}
+
+/* ── DIVIDER ───────────────────────────── */
+.divider{width:100%;height:1px;background:linear-gradient(to right,transparent,rgba(201,184,130,0.25),transparent);}
+
+/* ── NEXT PROJECT ──────────────────────── */
+.next-section{
+  padding:140px 48px;text-align:center;
+  position:relative;overflow:hidden;
+  background:var(--dark);border-top:1px solid var(--border);
+}
+.next-bg{
+  position:absolute;
+  font-family:'Cormorant Garamond',serif;
+  font-size:200px;font-weight:300;
+  color:rgba(22,22,180,0.04);
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  white-space:nowrap;pointer-events:none;
+}
+.next-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(52px,8vw,100px);font-weight:300;
+  color:#f0ebe0;line-height:0.9;margin-bottom:40px;
+}
+.next-title em{font-style:italic;color:var(--gold);}
+.next-link{
+  display:inline-flex;align-items:center;gap:16px;
+  font-family:'Syne',sans-serif;font-size:11px;
+  letter-spacing:0.25em;text-transform:uppercase;
+  color:#f0ebe0;text-decoration:none;
+  border-bottom:1px solid rgba(201,184,130,0.3);
+  padding-bottom:8px;transition:border-color .3s;
+}
+.next-link:hover{border-color:var(--gold);}
+
+/* ── SCREEN FRAMES ─────────────────────── */
+.screen-frame{background:#0d0d0d;border:1px solid var(--border);overflow:hidden;}
+.screen-bar{
+  height:28px;background:var(--dark);border-bottom:1px solid var(--border);
+  display:flex;align-items:center;padding:0 12px;gap:6px;
+}
+.dot{width:8px;height:8px;border-radius:50%;background:#2a2a2a;}
+.frame-label{
+  padding:12px 16px;border-top:1px solid var(--border);
+}
+.frame-label .fl-num{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);}
+.frame-label .fl-name{font-size:11px;color:var(--muted);margin-top:2px;}
+
+/* ── REVEAL ANIMATIONS ─────────────────── */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .75s ease,transform .75s ease;}
+.reveal.in{opacity:1;transform:none;}
+
+/* ── RESPONSIVE ────────────────────────── */
+@media(max-width:768px){
+  .cs-nav,.s-dark,.s-mid,.s-blue,.s-cream{padding-left:24px;padding-right:24px;}
+  .hero-cs{padding:100px 24px 0;}
+  .hero-bottom-grid,.grid-2,.grid-3,.grid-2-1,.process-grid,
+  .metrics-row,.learnings-grid,.deliverable-grid{grid-template-columns:1fr;}
+  .hero-bottom-grid{margin:0 -24px;}
+  .cs-nav-links{gap:16px;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="cs-nav">
+  <a href="index.html" class="cs-nav-logo">L.H</a>
+  <div class="cs-nav-links">
+    <a href="index.html">← Back to Work</a>
+    <a href="index.html#contact">Let's Talk →</a>
+  </div>
+</nav>
+
+<!-- ══ 01 — HERO ══════════════════════════════════════ -->
+<section class="hero-cs">
+  <div class="hero-cs-bg"></div>
+  <div>
+    <div class="hero-meta reveal">
+      <span>01 — Branding</span>
+      <span>Identity Redesign</span>
+      <span>Personal Project</span>
+    </div>
+    <h1 class="hero-cs-title reveal">
+      Chez<br><em>Suzanne</em>
+    </h1>
+    <p class="hero-tagline reveal">
+      A full brand identity redesign for a Café &amp; Bakery built around nostalgia, a grandmother's memory, and the blue beach cabins of La Baule.
+    </p>
+  </div>
+  <div class="hero-bottom-grid reveal">
+    <div class="hero-stat">
+      <div class="hs-label">Type</div>
+      <div class="hs-val">Brand Identity</div>
+      <div class="hs-sub">Personal project</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hs-label">Deliverables</div>
+      <div class="hs-val">Logo + Print + Social</div>
+      <div class="hs-sub">Full system</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hs-label">Tools</div>
+      <div class="hs-val">Figma + Illustrator</div>
+      <div class="hs-sub">+ Photoshop</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hs-label">Result</div>
+      <div class="hs-val">Client Thrilled</div>
+      <div class="hs-sub">100% satisfied</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ HERO IMAGE ══════════════════════════════════════ -->
+<div class="ph reveal" style="height:480px;">
+  <div class="ph-badge">Hero Mockup</div>
+  <div class="ph-icon">🖥️</div>
+  <div class="ph-title">Brand Identity Showcase</div>
+  <div class="ph-sub">Votre meilleure image du projet — logo sur mockup, packaging, ou brand board. 1400×700px.</div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ══ 02 — THE STORY ═════════════════════════════════ -->
+<section class="s-blue">
+  <div class="lbl reveal" style="color:var(--cream);opacity:.5;">
+    <span style="background:var(--cream);"></span>
+    The Story Behind the Brand
+  </div>
+  <h2 class="big-title reveal" style="color:var(--cream);">
+    More than a bakery.<br><em style="color:var(--gold);">A family memory.</em>
+  </h2>
+
+  <div style="max-width:800px;margin-top:48px;">
+    <div class="story-item reveal" style="border-bottom-color:rgba(255,255,255,0.1);">
+      <div class="story-label" style="color:var(--gold);">The Name</div>
+      <p class="story-text">Chez Suzanne is named after their grandmother — a woman who cooked with love and brought her grandchildren to La Baule every summer. The brand carries her name as a tribute, a thank you, a memory kept alive.</p>
+    </div>
+    <div class="story-item reveal" style="border-bottom-color:rgba(255,255,255,0.1);">
+      <div class="story-label" style="color:var(--gold);">The Blue</div>
+      <p class="story-text">The royal blue was not chosen at random. It is the exact shade of the beach cabins in La Baule — those striped cabanons where summers were spent, ice creams were eaten, and time stood still.</p>
+    </div>
+    <div class="story-item reveal" style="border-bottom-color:rgba(255,255,255,0.1);">
+      <div class="story-label" style="color:var(--gold);">The Illustrations</div>
+      <p class="story-text">Simple, slightly childlike drawings of croissants, cups, bread. They evoke the handmade drawings of childhood — naive, warm, full of life. Modern enough to stand out. Human enough to feel like home.</p>
+    </div>
+  </div>
+
+  <div class="quote-box reveal" style="margin-top:64px;background:var(--cream);border-left-color:var(--gold);">
+    <div class="quote-text" style="color:#111;">"Every design choice tells her story."</div>
+    <div class="quote-cite" style="color:var(--blue-vivid);">— Léa Hattab, Designer</div>
+  </div>
+</section>
+
+<!-- ══ 03 — THE CHALLENGE ════════════════════════════ -->
+<section class="s-dark">
+  <div class="lbl reveal">The Challenge</div>
+  <h2 class="big-title reveal" style="max-width:640px;">
+    Modernize without<br>losing the <em>soul</em>
+  </h2>
+
+  <div style="margin-top:48px;max-width:780px;">
+    <div class="challenge-row reveal">
+      <div class="ch-num">01</div>
+      <div class="ch-content">
+        <h3>A Single Outdated Logo</h3>
+        <p>The brand had only one asset — an old logo that no longer reflected the warmth and quality of the bakery. No visual system, no consistency, no identity beyond a name on a sign.</p>
+      </div>
+    </div>
+    <div class="challenge-row reveal">
+      <div class="ch-num">02</div>
+      <div class="ch-content">
+        <h3>Preserve the Emotional Core</h3>
+        <p>Modernizing the brand could not mean erasing what made Chez Suzanne special. The nostalgia, the family story, the grandmother — all of it had to survive the redesign and feel even more present.</p>
+      </div>
+    </div>
+    <div class="challenge-row reveal">
+      <div class="ch-num">03</div>
+      <div class="ch-content">
+        <h3>Build a Full System from One Logo</h3>
+        <p>From a single starting point, I had to create a complete identity: logo variations, print materials, packaging, social media content — all cohesive, all consistent, all telling the same story.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ 04 — PROCESS ══════════════════════════════════ -->
+<section class="s-mid">
+  <div class="lbl reveal">My Process</div>
+  <h2 class="big-title reveal">How the identity<br><em>came to life</em></h2>
+
+  <div class="process-grid">
+    <div class="process-step reveal">
+      <div class="ps-num">01</div>
+      <div class="ps-title">Discovery</div>
+      <div class="ps-text">Understanding the family story, the values, the emotions behind the brand name. Suzanne's summers in La Baule as the emotional foundation.</div>
+    </div>
+    <div class="process-step reveal">
+      <div class="ps-num">02</div>
+      <div class="ps-title">Direction</div>
+      <div class="ps-text">Defining the visual universe: royal blue, hand-drawn illustration style, modern-nostalgic balance. Color as memory, not just aesthetics.</div>
+    </div>
+    <div class="process-step reveal">
+      <div class="ps-num">03</div>
+      <div class="ps-title">Logo System</div>
+      <div class="ps-text">Creating the primary logo and all its variations for different use cases — wordmark, badge, icon — refined and modernized from the original.</div>
+    </div>
+    <div class="process-step reveal">
+      <div class="ps-num">04</div>
+      <div class="ps-title">Full System</div>
+      <div class="ps-text">Extending to packaging, posters, social content and print — one cohesive brand voice that tells the same story across every touchpoint.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WIREFRAME / EXPLORATION ════════════════════════ -->
+<section class="s-dark">
+  <div class="lbl reveal">Exploration</div>
+  <h2 class="big-title reveal">Logo system &amp;<br><em>visual exploration</em></h2>
+  <p class="body-text reveal" style="max-width:540px;margin-bottom:48px;">Three phases of logo exploration before landing on the final mark — each iteration getting closer to the right balance between warmth and modernity.</p>
+
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+    <div class="screen-frame reveal">
+      <div class="screen-bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+      <div class="ph" style="height:280px;border:none;">
+        <div class="ph-icon">✏️</div>
+        <div class="ph-title">Logo — V1</div>
+        <div class="ph-sub">Première exploration. 400×400px.</div>
+      </div>
+      <div class="frame-label">
+        <div class="fl-num">Exploration 01</div>
+        <div class="fl-name">Premier draft</div>
+      </div>
+    </div>
+    <div class="screen-frame reveal">
+      <div class="screen-bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+      <div class="ph" style="height:280px;border:none;">
+        <div class="ph-icon">✏️</div>
+        <div class="ph-title">Logo — V2</div>
+        <div class="ph-sub">Itération intermédiaire. 400×400px.</div>
+      </div>
+      <div class="frame-label">
+        <div class="fl-num">Exploration 02</div>
+        <div class="fl-name">Affinage</div>
+      </div>
+    </div>
+    <div class="screen-frame reveal">
+      <div class="screen-bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+      <div class="ph" style="height:280px;border:none;">
+        <div class="ph-icon">⭐</div>
+        <div class="ph-title">Logo — Final</div>
+        <div class="ph-sub">Version finale retenue. 400×400px.</div>
+      </div>
+      <div class="frame-label">
+        <div class="fl-num">Version Finale</div>
+        <div class="fl-name">Logo principal</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ 05 — KEY DECISIONS ════════════════════════════ -->
+<section class="s-mid">
+  <div class="lbl reveal">Key Design Decisions</div>
+  <h2 class="big-title reveal">Why these<br><em>choices?</em></h2>
+
+  <div class="grid-3" style="margin-top:48px;">
+    <div class="decision-card reveal">
+      <div class="dc-icon">🔵</div>
+      <div class="dc-title">The Blue — Emotional Anchor</div>
+      <p class="dc-text">Royal blue was chosen because it is the exact color of La Baule beach cabins — an instantly recognizable reference for anyone who knows the place. Color as memory, not just aesthetics.</p>
+      <div class="dc-tag">Emotional Anchor</div>
+    </div>
+    <div class="decision-card reveal">
+      <div class="dc-icon">✍️</div>
+      <div class="dc-title">The Illustrations — Modern Nostalgia</div>
+      <p class="dc-text">Hand-drawn, slightly childlike illustrations of baked goods bring warmth and humanity to the brand. Simple enough to be timeless, distinctive enough to be memorable.</p>
+      <div class="dc-tag">Modern Nostalgia</div>
+    </div>
+    <div class="decision-card reveal">
+      <div class="dc-icon">🔠</div>
+      <div class="dc-title">The Typography — Playful Authority</div>
+      <p class="dc-text">A bold, slightly quirky letterform that balances the gravity of a family tribute with the warmth and accessibility of a neighbourhood bakery. Serious but never cold.</p>
+      <div class="dc-tag">Brand Voice</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 06 — FINAL BRAND VISUALS ══════════════════════ -->
+<section class="s-dark">
+  <div class="lbl reveal">Final Brand Identity</div>
+  <h2 class="big-title reveal">The design<br><em>delivered</em></h2>
+
+  <div class="ph reveal" style="height:420px;margin-bottom:16px;">
+    <div class="ph-badge">Logo System</div>
+    <div class="ph-icon">🎨</div>
+    <div class="ph-title">Logo System — All Variations</div>
+    <div class="ph-sub">Primary logo, badge version, monochrome, on blue + on cream backgrounds. Export Figma ou brand board. 1400×600px.</div>
+  </div>
+
+  <div class="grid-2" style="gap:16px;margin-top:16px;">
+    <div class="ph reveal" style="height:320px;">
+      <div class="ph-badge">Print</div>
+      <div class="ph-icon">☕</div>
+      <div class="ph-title">Coffee Cup + Loyalty Card</div>
+      <div class="ph-sub">Mockup packaging. 700×500px.</div>
+    </div>
+    <div class="ph reveal" style="height:320px;">
+      <div class="ph-badge">Social</div>
+      <div class="ph-icon">📱</div>
+      <div class="ph-title">Instagram Content Templates</div>
+      <div class="ph-sub">Grille de posts Instagram. 700×500px.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 07 — DELIVERABLES ══════════════════════════════ -->
+<section class="s-mid">
+  <div class="lbl reveal">Deliverables</div>
+  <h2 class="big-title reveal">What was<br><em>delivered</em></h2>
+
+  <div class="deliverable-grid" style="margin-top:48px;">
+    <div class="deliverable-card reveal">
+      <div class="dl-title">Primary Logo</div>
+      <p class="dl-text">The main logo with the Chez Suzanne wordmark, the circular badge version, and the standalone icon — all refined and modernized from the original single asset.</p>
+    </div>
+    <div class="deliverable-card reveal">
+      <div class="dl-title">Logo Variations</div>
+      <p class="dl-text">Multiple versions of the logo adapted for different contexts: light/dark backgrounds, horizontal and vertical layouts, monochrome and full color — a complete flexible system.</p>
+    </div>
+    <div class="deliverable-card reveal">
+      <div class="dl-title">Print &amp; Packaging</div>
+      <p class="dl-text">Coffee cups, loyalty cards, posters and event visuals — all designed with the same royal blue and hand-drawn illustrations, creating instant brand recognition.</p>
+    </div>
+    <div class="deliverable-card reveal">
+      <div class="dl-title">Social Media Content</div>
+      <p class="dl-text">A cohesive set of post templates and content for Instagram — maintaining the warm, nostalgic tone across all digital touchpoints while feeling fresh and modern.</p>
+    </div>
+  </div>
+
+  <div class="brand-banner reveal" style="margin-top:48px;">
+    <div class="bb-title">A Complete Brand Identity — From One Logo to a Full Visual World</div>
+    <div class="bb-sub">Logo system &nbsp;•&nbsp; Print materials &nbsp;•&nbsp; Packaging &nbsp;•&nbsp; Social media content</div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ 08 — THE RESULT ═══════════════════════════════ -->
+<section class="s-dark">
+  <div class="lbl reveal">The Result</div>
+
+  <div class="quote-box reveal">
+    <div class="quote-text">"The new identity is exactly who we are — warm, modern, and full of memories. We are so proud of it."</div>
+    <div class="quote-cite">— Chez Suzanne Client</div>
+  </div>
+
+  <div class="metrics-row">
+    <div class="metric-card reveal">
+      <span class="metric-num">100%</span>
+      <span class="metric-label">Client Satisfaction</span>
+    </div>
+    <div class="metric-card reveal">
+      <span class="metric-num">4</span>
+      <span class="metric-label">Deliverable Categories</span>
+    </div>
+    <div class="metric-card reveal">
+      <span class="metric-num">1→∞</span>
+      <span class="metric-label">Logo to Full System</span>
+    </div>
+  </div>
+
+  <div class="ph reveal" style="height:360px;margin-top:0;">
+    <div class="ph-badge">Final Result</div>
+    <div class="ph-icon">🏆</div>
+    <div class="ph-title">Brand in Context — Final Mockup</div>
+    <div class="ph-sub">Votre meilleur mockup du brand final livré. Cette image clôt le projet avec impact. 1400×500px.</div>
+  </div>
+</section>
+
+<!-- ══ 09 — LEARNINGS ════════════════════════════════ -->
+<section class="s-mid">
+  <div class="lbl reveal">What I Learned</div>
+  <h2 class="big-title reveal">Key<br><em>Takeaways</em></h2>
+
+  <div class="learnings-grid" style="margin-top:48px;">
+    <div class="learning-card reveal">
+      <div class="lc-title">Storytelling is Design</div>
+      <div class="lc-text">The most powerful design decision on this project was not a color or a typeface — it was understanding the story first. Suzanne's summers in La Baule gave every visual choice its meaning and emotional weight.</div>
+    </div>
+    <div class="learning-card reveal">
+      <div class="lc-title">Personal Projects Reveal Your True Style</div>
+      <div class="lc-text">Without a client brief to constrain me, I discovered my own design voice: warm, story-driven, modern but never cold. This project became a reference I return to when defining my aesthetic direction.</div>
+    </div>
+    <div class="learning-card reveal">
+      <div class="lc-title">Consistency Builds Trust</div>
+      <div class="lc-text">Extending one logo into a full system taught me that a brand lives in the details — the same blue on a coffee cup, a loyalty card, and an Instagram post creates recognition that no single asset can achieve.</div>
+    </div>
+    <div class="learning-card reveal">
+      <div class="lc-title">Constraints are Creative Allies</div>
+      <div class="lc-text">Starting with only an old logo and a family story, I had to build everything from first principles. The limitation forced me to be more intentional, more narrative, more thoughtful in every decision.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ NEXT PROJECT ═══════════════════════════════════ -->
+<section class="next-section">
+  <div class="next-bg">NEXT</div>
+  <div style="position:relative;" class="reveal">
+    <div class="lbl" style="justify-content:center;">Next Project</div>
+    <h2 class="next-title">
+      TransfOr<em>mIt</em>
+    </h2>
+    <a href="index.html" class="next-link">
+      View Project <span style="color:var(--gold);">→</span>
+    </a>
+  </div>
+</section>
+
+<!-- CTA FOOTER -->
+<div style="background:#0d0d0d;border-top:1px solid var(--border);padding:80px 48px;text-align:center;">
+  <div style="font-size:9px;letter-spacing:0.28em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">Let's Build Your Brand Story Together</div>
+  <div style="width:32px;height:1px;background:var(--border);margin:0 auto 40px;"></div>
+  <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(48px,7vw,88px);font-weight:300;line-height:1;margin-bottom:40px;color:#f0ebe0;">
+    let's do <em style="color:var(--gold);">this!</em>
+  </div>
+  <a href="mailto:lczayache@gmail.com" style="font-size:13px;letter-spacing:0.1em;color:#f0ebe0;text-decoration:none;border-bottom:1px solid rgba(201,184,130,0.4);padding-bottom:2px;">
+    Lczayache@gmail.com →
+  </a>
+</div>
+
+<footer style="border-top:1px solid var(--border);padding:22px 48px;display:flex;justify-content:space-between;align-items:center;">
+  <span style="font-size:10px;color:var(--muted);">© 2026 Léa Hattab — All rights reserved</span>
+  <div style="display:flex;gap:24px;">
+    <a href="index.html" style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;text-decoration:none;color:var(--muted);">Work</a>
+    <a href="index.html#about" style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;text-decoration:none;color:var(--muted);">About</a>
+    <a href="mailto:lczayache@gmail.com" style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;text-decoration:none;color:var(--muted);">Contact</a>
+  </div>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('in'); });
+}, { threshold: 0.07 });
+document.querySelectorAll('.reveal').forEach((el, i) => {
+  el.style.transitionDelay = (i % 4) * 0.06 + 's';
+  obs.observe(el);
+});
+</script>
+</body>
+</html>
