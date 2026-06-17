@@ -1,94 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Léa Hattab — Coming Soon</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Caveat:wght@400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: #eeebe4;
-      color: #111;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 40px 24px;
-    }
-    .logo {
-      font-size: 12px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: #888;
-      margin-bottom: 80px;
-    }
-    .name {
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 300;
-      font-size: clamp(56px, 10vw, 110px);
-      line-height: 0.9;
-      margin-bottom: 4px;
-    }
-    .name-script {
-      font-family: 'Caveat', cursive;
-      font-weight: 400;
-      font-size: clamp(56px, 10vw, 110px);
-      line-height: 1;
-    }
-    .line {
-      width: 40px;
-      height: 1px;
-      background: #888;
-      margin: 40px auto;
-    }
-    .tagline {
-      font-size: 11px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: #888;
-      margin-bottom: 60px;
-    }
-    .coming {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-size: clamp(18px, 2.5vw, 24px);
-      font-weight: 300;
-      color: #444;
-      margin-bottom: 40px;
-    }
-    .email {
-      font-size: 12px;
-      letter-spacing: 0.1em;
-      color: #111;
-      text-decoration: none;
-      border-bottom: 1px solid #111;
-      padding-bottom: 2px;
-    }
-    .footer {
-      position: fixed;
-      bottom: 24px;
-      font-size: 10px;
-      color: #aaa;
-      letter-spacing: 0.1em;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Léa Hattab — Graphic &amp; UX/UI Designer</title>
+  <meta name="description" content="Portfolio de Léa Hattab, Graphic &amp; UX/UI Designer. Branding, identité visuelle, web design, campagnes digitales." />
+  <meta name="author" content="Léa Hattab" />
+
+  <!-- Open Graph (réseaux sociaux) -->
+  <meta property="og:title" content="Léa Hattab — Graphic &amp; UX/UI Designer" />
+  <meta property="og:description" content="Portfolio de Léa Hattab, Graphic &amp; UX/UI Designer." />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Kumbh+Sans:wght@300;400;500;600&family=Homemade+Apple&family=Assistant:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/src/styles/main.css" />
 </head>
 <body>
-  <div class="logo">L.H</div>
-  <div>
-    <div class="name">Léa</div>
-    <div class="name-script">Hattab</div>
+
+  <!-- Point d'entrée de l'application -->
+  <div id="app">
+    <!-- Chargement initial -->
+    <div style="display:flex;align-items:center;justify-content:center;height:100vh;font-family:'Montserrat',sans-serif;font-weight:300;font-size:16px;letter-spacing:4px;text-transform:uppercase;color:#797c7f;">
+      Chargement...
+    </div>
   </div>
-  <div class="line"></div>
-  <div class="tagline">Graphic &amp; UX/UI Designer</div>
-  <p class="coming">Something beautiful is coming soon.</p>
-  <a href="mailto:lczayache@gmail.com" class="email">lczayache@gmail.com</a>
-  <div class="footer">© 2026 Léa Hattab</div>
+
+  <!-- Données du site (à modifier dans src/data/) -->
+  <script src="/src/data/siteContent.js"></script>
+  <script src="/src/data/projects.js"></script>
+
+  <!-- Composants -->
+  <script src="/src/components/header.js"></script>
+  <script src="/src/components/footer.js"></script>
+
+  <!-- Pages -->
+  <script src="/src/pages/home.js"></script>
+  <script src="/src/pages/work.js"></script>
+  <script src="/src/pages/project.js"></script>
+
+  <!-- Application principale (routeur) -->
+  <script>
+    // GitHub Pages SPA : restaure l'URL depuis la redirection 404
+    (function() {
+      var params = new URLSearchParams(window.location.search);
+      var redirect = params.get('redirect');
+      if (redirect) {
+        params.delete('redirect');
+        var search = params.toString();
+        var url = redirect + (search ? '?' + search : '') + window.location.hash;
+        window.history.replaceState(null, '', url);
+      }
+    })();
+  </script>
+  <script src="/src/app.js"></script>
+
 </body>
 </html>

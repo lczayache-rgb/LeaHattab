@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Léa Hattab — Graphic &amp; UX/UI Designer</title>
+  <meta name="description" content="Portfolio de Léa Hattab, Graphic &amp; UX/UI Designer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Kumbh+Sans:wght@300;400;500;600&family=Homemade+Apple&family=Assistant:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/styles/main.css" />
+  <script>
+    // GitHub Pages SPA trick : redirige vers index.html avec le path en paramètre
+    // puis index.html lit ce paramètre pour restaurer la vraie URL
+    var path = window.location.pathname;
+    var search = window.location.search;
+    var hash = window.location.hash;
+    // Redirige vers index.html en encodant le path dans l'URL
+    window.location.replace(
+      '/?redirect=' + encodeURIComponent(path) +
+      (search ? '&' + search.slice(1) : '') +
+      hash
+    );
+  </script>
+</head>
+<body>
+  <div style="display:flex;align-items:center;justify-content:center;height:100vh;font-family:'Montserrat',sans-serif;font-weight:300;font-size:16px;letter-spacing:4px;text-transform:uppercase;color:#797c7f;">
+    Redirection...
+  </div>
+</body>
+</html>
